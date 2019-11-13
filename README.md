@@ -2,6 +2,8 @@
 
 Git Commands:
 ```
+  git config --global user.name saeed-sufi
+  git config --global user.email saeed.sufi@hotmail.com
   git add -A
   git commit -m 'testing git'
   git checkout __ .
