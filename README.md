@@ -19,6 +19,30 @@ Git Commands:
   ```
   npm init // This makes package.json (our grocery list)
   npm install jquery --save
+  npm install // This command installs all the packages listed in package.json
+  npm show <packagename> version
+  npm list --depth=0
+  ```
+  
+  Gulp
+  ```
+  npm install gulp-cli --global
+  npm install gulp --save-dev
+  gulp // this will run the 'default' task of gulp
+  npm install gulp-watch --save-dev
   
   ```
   
+  All the npm packages installation in order
+  
+  ```
+  npm install gulp-cli --global
+  npm install gulp --save-dev
+  npm install gulp-watch --save-dev
+  npm install gulp-postcss --save-dev
+  npm install autoprefixer --save-dev
+  
+  ```
+  Issues:
+  
+  I had  to install [plumber](https://www.npmjs.com/package/gulp-plumber) to circumvent CSSSyntaxError and prevent it from breaking the pipe.
