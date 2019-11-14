@@ -41,6 +41,9 @@ Git Commands:
   npm install gulp-watch --save-dev
   npm install gulp-postcss --save-dev
   npm install autoprefixer --save-dev
+  npm install gulp-plumber --save-dev
+  npm install postcss-simple-vars --save-dev
+  npm install postcss-nested --save-dev
   
   ```
   Issues:
