@@ -1,0 +1,16 @@
+body {
+  font-family: 'roboto', sans-serif;
+}
+
+img {
+  max-width: 100%;
+  margin: auto;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: $mainOrange;
+}
