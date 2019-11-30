@@ -70,8 +70,8 @@
   I had  to install [plumber](https://www.npmjs.com/package/gulp-plumber) to circumvent CSSSyntaxError and prevent it from breaking the pipe. This issue was resolved when I learned how to manage gulp errors later in the course. So, there was no need to use plumber anymore.
   
   ## Notes:
-  **normalize.css** is very useful since since it resets every default css property that different browsers use so that our project would look the same in all browsers. 
+  **normalize.css** is very useful since it resets every default css property that different browsers use so that our project would look the same in all browsers. 
   Remember to use it for all your projects!
   
  ### em Size Unit
- Use ```em``` for margins of the text so that they scale relative to the font sizes used in the text.
+ Use ```em``` for margins of the text so that they scale relative to the font sizes used in the text. 
