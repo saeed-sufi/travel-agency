@@ -7,6 +7,26 @@
   overflow: hidden;
   /* background-color: green; */
   
+  &--no-padding-until-medium {
+    padding-right: 0;
+    padding-left: 0;
+
+    @mixin atLarge {
+      padding-right: 20px;
+      padding-left: 20px;
+    }
+  }
+
+  &--no-padding-until-large {
+    padding-right: 0;
+    padding-left: 0;
+
+    @mixin atLarge {
+      padding-right: 20px;
+      padding-left: 20px;
+    }
+  }
+
   &--medium {
     max-width: 967px;
   }
