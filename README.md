@@ -19,7 +19,7 @@
   git branch count-to-ten
   git checkout count-to-ten // changing the working branch from master to count-to-ten
   // once you have finished working on a branch you are ready to merge it to the master branch
-  // first be sure to checkout to master branch and them execute the following:
+  // first be sure to checkout to master branch and then execute the following:
   git merge count-to-ten
   // if yout want to stage and commit changes in one move:
   git commit -am 'counted to thirteen'
@@ -30,6 +30,11 @@
   git checkout -b our-features
   // if you want a dedicated commit for the merge:
   git merge our-features --no-ff
+  // show a list of branches:
+  git show-branch
+  git branch -a
+  
+  
   ```
   
   ## npm 
