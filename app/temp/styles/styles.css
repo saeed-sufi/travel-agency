@@ -1089,3 +1089,27 @@ a {
     background-position: 92.04013377926421% 86.35616438356163%;
   }
 
+.site-footer {
+  background-color: #2f5572;
+  color: #FFF;
+  padding: .5rem 0;
+  text-align: center;
+  font-weight: 200;
+
+
+}
+
+.site-footer__text {
+    display: block;
+    margin-bottom: 1rem;
+  }
+
+@media (min-width: 530px) {
+
+.site-footer__text {
+      display: inline;
+      margin-right: 1.5rem;
+      margin-bottom: 0
+  }
+  }
+
