@@ -2,17 +2,23 @@
   position: relative;
   border-bottom: 8px solid $mainBlue;
   
+  
   &__image {
     display: block;
   }
   
   &__text {
+    padding-top: 98px;
     position: absolute;
     width: 100%;
     text-align: center;
     top: 50%;
     transform: translateY(-50%);
     left: 0px;
+
+    @mixin atMedium {
+      padding-top: 60px;
+    }
   }
   
   &__title {
