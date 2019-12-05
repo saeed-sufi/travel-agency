@@ -31,8 +31,12 @@
   // if you want a dedicated commit for the merge:
   git merge our-features --no-ff
   // show a list of branches:
+  git branch
   git show-branch
   git branch -a
+  
+  #### Git Terminology
+a pull request is basically a request to merge one branch into another
   
   
   ```
