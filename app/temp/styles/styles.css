@@ -1127,8 +1127,14 @@ a {
   z-index: 2;
   width: 100%;
   padding: 10px 0;
+  -webkit-transition: background-color .3s ease-out;
+  transition: background-color .3s ease-out;
 
 }
+
+.site-header__mobile-background {
+    background-color: rgba(47,85,114, .4);
+  }
 
 @media (min-width: 763px) {
 
@@ -1164,32 +1170,109 @@ a {
   }
 
 .site-header__btn-container {
-    float: right;
+    display: block;
+    text-align: center;
+  }
+
+@media (min-width: 763px) {
+
+.site-header__btn-container {
+      float: right
+  }
   }
 
 .site-header__menu-container {
-    display: none;
+    /* display: none; */
+    padding-top: 100px;
+    text-align: center;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+    z-index: -10;
+    position: relative;
+    opacity: 0;
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
   }
 
 @media (min-width: 763px) {
 
 .site-header__menu-container {
-      display: block
+      z-index: 1;
+      padding-top: 0;
+      opacity: 1;
+      -webkit-transform: scale(1);
+              transform: scale(1)
+  }
+  }
+
+.site-header__menu-container--is-visible {
+      z-index: 1;
+      opacity: 1;
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+
+.site-header__menu-icon {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    background-color: #FFF;
+    right: 10px;
+    top: 10px;
+    z-index: 10;
+  }
+
+@media (min-width: 763px) {
+
+.site-header__menu-icon {
+      display: none
   }
   }
 
 .primary-nav li {
     list-style: none;
-    float: left;
+    display: inline-block;
+    text-align: center;
     padding-right: 1.3rem;
+  }
+
+@media (min-width: 763px) {
+
+.primary-nav li {
+      float: left; 
+      display: block
+  }
+  }
+
+.primary-nav li:last-child {
+    
+    padding-right: 0;
+  }
+
+@media (min-width: 763px) {
+
+.primary-nav li:last-child {
+      padding-right: 1.3rem
+  }
   }
 
 .primary-nav a {
     color: #FFF;
     text-decoration: none;
     font-weight: 300;
-    padding: 12px 0;
+    padding: 12px 10px;
     display: block;
+    background-color: rgba(47,85,114, .6);
+    margin-top: 20px;
+  }
+
+@media (min-width: 763px) {
+
+.primary-nav a {
+      background-color: transparent;
+      padding: 12px 0;
+      margin-top: 0
+  }
   }
 
 .primary-nav ul {
@@ -1203,7 +1286,10 @@ a {
     display: table;
   }
 
+@media (min-width: 763px) {
+
 .primary-nav--pull-right {
-    float: right;
+      float: right
+  }
   }
 

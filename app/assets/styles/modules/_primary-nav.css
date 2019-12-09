@@ -2,16 +2,40 @@
 
   li {
     list-style: none;
-    float: left;
+    display: inline-block;
+    text-align: center;
     padding-right: 1.3rem;
+    
+
+    @mixin atMedium {
+      float: left; 
+      display: block; 
+    }
+  }
+
+  li:last-child {
+    
+    padding-right: 0;
+
+    @mixin atMedium{
+      padding-right: 1.3rem;
+    }
   }
 
   a {
     color: #FFF;
     text-decoration: none;
     font-weight: 300;
-    padding: 12px 0;
+    padding: 12px 10px;
     display: block;
+    background-color: rgba($mainBlue, .6);
+    margin-top: 20px;
+
+    @mixin atMedium {
+      background-color: transparent;
+      padding: 12px 0;
+      margin-top: 0;
+    }
   }
 
   ul {
@@ -21,6 +45,9 @@
   }
   
   &--pull-right {
-    float: right;
+
+    @mixin atMedium {
+      float: right;
+    }
   }
 }
