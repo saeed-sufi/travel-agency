@@ -34,12 +34,17 @@
   git branch
   git show-branch
   git branch -a
+  git fetch // will get all the files at repo ready and available
+  git pull origin .gitignore // will pull only the .gitignore file into the local repository
   
-  #### Git Terminology
-a pull request is basically a request to merge one branch into another
-  
-  
+  // for more extended comment use the following commenting method:
+  git commit -m "Subject" -m "Description..."
   ```
+  #### Git Terminology
+  Pull request: is basically a request to merge one branch into another
+  
+  
+ 
   
   ## npm 
   ```
@@ -73,6 +78,9 @@ a pull request is basically a request to merge one branch into another
   npm install postcss-import --save-dev
   npm install browser-sync --save-dev
   npm install postcss-mixins --save-dev
+  npm install webpack -g // make sure to install it globally!
+  
+  
   ```
   ## Issues:
   
