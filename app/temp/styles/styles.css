@@ -1214,13 +1214,56 @@ a {
 
 .site-header__menu-icon {
     width: 20px;
-    height: 20px;
+    height: 19px;
     position: absolute;
-    background-color: #FFF;
     right: 10px;
     top: 10px;
     z-index: 10;
   }
+
+.site-header__menu-icon__middle {
+      position: absolute;
+      top: 8px;
+      left: 0px;
+      height: 3px;
+      width: 20px;
+      background-color: #FFF;
+      -webkit-transition: all .3s;
+      transition: all .3s;
+
+    }
+
+.site-header__menu-icon::before {
+        content: "";
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        height: 3px;
+        width: 20px;
+        background-color: #FFF;
+        -webkit-transform-origin: 0 0;
+                transform-origin: 0 0;
+        -webkit-transition: -webkit-transform .3s;
+        transition: -webkit-transform .3s;
+        transition: transform .3s;
+        transition: transform .3s, -webkit-transform .3s;
+      }
+
+.site-header__menu-icon::after {
+      content: "";
+      position: absolute;
+      bottom: 0px;
+      left: 0px;
+      height: 3px;
+      width: 20px;
+      background-color: #FFF;
+      -webkit-transform-origin: 0 100%;
+              transform-origin: 0 100%;
+      -webkit-transition: -webkit-transform .3s;
+      transition: -webkit-transform .3s;
+      transition: transform .3s;
+      transition: transform .3s, -webkit-transform .3s;
+    }
 
 @media (min-width: 763px) {
 
@@ -1228,6 +1271,24 @@ a {
       display: none
   }
   }
+
+.site-header__menu-icon--close-x::before {
+      opacity: 1;
+      -webkit-transform: rotate(45deg) scaleX(1.25);
+              transform: rotate(45deg) scaleX(1.25);
+    }
+
+.site-header__menu-icon--close-x .site-header__menu-icon__middle {
+      opacity: 0;
+      -webkit-transform: scaleX(0);
+              transform: scaleX(0);
+    }
+
+.site-header__menu-icon--close-x::after {
+      opacity: 1;
+      -webkit-transform: rotate(-45deg) scaleX(1.25) translateY(1px);
+              transform: rotate(-45deg) scaleX(1.25) translateY(1px);
+    }
 
 .primary-nav li {
     list-style: none;
