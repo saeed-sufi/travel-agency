@@ -21,7 +21,7 @@
   // once you have finished working on a branch you are ready to merge it to the master branch
   // first be sure to checkout to master branch and then execute the following:
   git merge count-to-ten
-  // if yout want to stage and commit changes in one move:
+  // if you want to stage and commit changes in one move:
   git commit -am 'counted to thirteen'
   git push origin count-to-fifteen
   // to delete a branch
@@ -79,6 +79,8 @@
   npm install browser-sync --save-dev
   npm install postcss-mixins --save-dev
   npm install webpack -g // make sure to install it globally!
+  npm install babel-core babel-loader babel-preset-es2015 --save-dev
+  
   
   
   ```
