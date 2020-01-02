@@ -35,7 +35,12 @@
       background-color: transparent;
       padding: 12px 0;
       margin-top: 0;
+
+      &.is-current-link {
+        color: $mainOrange
+      }
     }
+
   }
 
   ul {

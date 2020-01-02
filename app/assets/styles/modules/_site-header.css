@@ -12,6 +12,11 @@
   
   @mixin atMedium {
     background-color: rgba($mainBlue, .4);
+    position: fixed;
+
+    &--bg-color {
+      background-color: rgba($mainBlue, .9);
+    }
   }
 
   &__logo {
@@ -27,6 +32,11 @@
     @mixin atMedium {
       left: auto;
       transform: translateX(0);
+      transition: transform .3s;
+
+      .site-header--bg-color &{
+        transform: scale(.58)
+      }
     }
   }
 

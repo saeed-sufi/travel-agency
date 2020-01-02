@@ -1139,9 +1139,14 @@ a {
 @media (min-width: 763px) {
 
 .site-header {
-    background-color: rgba(47,85,114, .4)
+    background-color: rgba(47,85,114, .4);
+    position: fixed
 
 }
+
+    .site-header--bg-color {
+      background-color: rgba(47,85,114, .9);
+    }
   }
 
 .site-header__logo {
@@ -1161,8 +1166,17 @@ a {
 .site-header__logo {
       left: auto;
       -webkit-transform: translateX(0);
-              transform: translateX(0)
+              transform: translateX(0);
+      -webkit-transition: -webkit-transform .3s;
+      transition: -webkit-transform .3s;
+      transition: transform .3s;
+      transition: transform .3s, -webkit-transform .3s
   }
+
+      .site-header--bg-color .site-header__logo{
+        -webkit-transform: scale(.58);
+                transform: scale(.58)
+      }
   }
 
 .site-header__logo--graphic {
@@ -1325,6 +1339,7 @@ a {
     display: block;
     background-color: rgba(47,85,114, .6);
     margin-top: 20px;
+
   }
 
 @media (min-width: 763px) {
@@ -1333,7 +1348,12 @@ a {
       background-color: transparent;
       padding: 12px 0;
       margin-top: 0
+
   }
+
+      .primary-nav a.is-current-link {
+        color: #d49440
+      }
   }
 
 .primary-nav ul {

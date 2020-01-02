@@ -18,6 +18,7 @@ class RevealOnScroll {
     
     this.revealItem.each(function() {
       var currentItem = this;
+
       new Waypoint({
         element: currentItem,
         handler: function() {
