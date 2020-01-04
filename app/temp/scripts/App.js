@@ -11271,6 +11271,7 @@ var StickyMenu = function () {
   function StickyMenu() {
     _classCallCheck(this, StickyMenu);
 
+    this.lazyImages = (0, _jquery2.default)(".lazyload");
     this.menu = (0, _jquery2.default)(".site-header");
     this.headerElement = (0, _jquery2.default)(".large-hero__title");
     this.headerLogo = (0, _jquery2.default)(".site-header__logo");
@@ -11279,9 +11280,17 @@ var StickyMenu = function () {
     this.pageSections = (0, _jquery2.default)(".page-section");
     this.createPageSectionWaypoint();
     this.smoothScrolling();
+    this.refreshWaypoints();
   }
 
   _createClass(StickyMenu, [{
+    key: 'refreshWaypoints',
+    value: function refreshWaypoints() {
+      this.lazyImages.on('load', function () {
+        Waypoint.refreshAll();
+      });
+    }
+  }, {
     key: 'smoothScrolling',
     value: function smoothScrolling() {
       this.headerLinks.smoothScroll();

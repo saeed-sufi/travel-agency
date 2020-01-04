@@ -674,11 +674,10 @@ a {
   }
 
 @media (min-width: 1010px) {
-
-.page-section--testimonial-bg {
-      background: url('/assets/images/testimonials-bg.jpg') no-repeat top center;
-      background-size: cover
-  }
+      .page-section--testimonial-bg.lazyloaded {
+        background: url('/assets/images/testimonials-bg.jpg') no-repeat top center;
+        background-size: cover;
+      }
   }
 
 .headline {

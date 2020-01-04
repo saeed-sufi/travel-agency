@@ -4,6 +4,7 @@ import smoothScroll from 'jquery-smooth-scroll'
 
 class StickyMenu {
   constructor() {
+    this.lazyImages = $(".lazyload")
     this.menu = $(".site-header")
     this.headerElement = $(".large-hero__title")
     this.headerLogo = $(".site-header__logo")
@@ -12,6 +13,13 @@ class StickyMenu {
     this.pageSections = $(".page-section")
     this.createPageSectionWaypoint()
     this.smoothScrolling()
+    this.refreshWaypoints()
+  }
+
+  refreshWaypoints() {
+    this.lazyImages.on('load', function() {
+      Waypoint.refreshAll()
+    })
   }
 
   smoothScrolling() {
