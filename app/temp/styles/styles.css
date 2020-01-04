@@ -610,6 +610,10 @@ a {
     max-width: 967px;
   }
 
+.wrapper--narrow {
+    max-width: 467px;
+  }
+
 .wrapper .wrapper {
     padding-left: 0px;
     padding-right: 0px;
@@ -907,6 +911,11 @@ a {
 .section-title--blue strong {
       font-weight: 600;
     }
+
+.section-title--less-b-margin {
+    margin-bottom: 1.2rem;
+    margin-top: 0;
+  }
 
 .section-title__icon {
     display: block;
@@ -1388,3 +1397,97 @@ a {
             transform: scale(1);
   }
 
+.modal {
+  position: fixed;
+  z-index: 5; 
+  background-color: rgba(255,255,255, .95);
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.modal--is-visible {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transform: scale(1);
+            transform: scale(1)
+  }
+
+.modal__description {
+    font-weight: 200;
+    line-height: 1.6;
+    text-align: center;
+  }
+
+.modal__inner {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+
+  }
+
+.modal__close {
+    z-index: 5;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    -webkit-transform: scaleX(1.2);
+            transform: scaleX(1.2);
+    font-size: 2rem;
+    color: #2f5572;
+    -webkit-transition: color .3s;
+    transition: color .3s;
+    -webkit-transform-origin: 100% 0;
+            transform-origin: 100% 0;
+  }
+
+.modal__close:hover {
+      color: #d49440
+    }
+
+.social-icons {
+
+  text-align: center;
+}
+
+.social-icons__icon {
+    background-color: #d49440;
+    display: inline-block;
+    width: 58px;
+    height: 58px;
+    position: relative;
+    margin-right: 5px;
+
+  
+
+  }
+
+@media (min-width: 530px) {
+
+.social-icons__icon {
+      width: 72px;
+      height: 72px
+
+  
+
+  }
+  }
+
+.social-icons__icon .icon {
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
+    }

@@ -31,6 +31,10 @@
     max-width: 967px;
   }
 
+  &--narrow {
+    max-width: 467px;
+  }
+
   .wrapper {
     padding-left: 0px;
     padding-right: 0px;
