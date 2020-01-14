@@ -10,6 +10,8 @@
   git checkout -- .
   git remote -v
   git remote set-url origin https://github.com/saeed-sufi/travel-agency.git
+  // To make a gitignore file, first make a gitignore.txt file and then open the command line and type:
+  ren gitignore.txt .gitignore
   git push origin master
   git pull origin master
   git clone https://github.com/saeed-sufi/travel-agency.git
