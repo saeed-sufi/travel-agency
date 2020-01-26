@@ -82,9 +82,13 @@
   npm install postcss-mixins --save-dev
   npm install webpack -g // make sure to install it globally!
   npm install babel-core babel-loader babel-preset-es2015 --save-dev
-  
-  
-  
+  npm install gulp-rename --save-dev
+  npm install lazysizes --save
+  npm install jquery-smooth-scroll --save
+  npm install picturefill --save
+  npm install imagemin --save-dev
+  npm install usemin --save-dev
+  npm install gulp-rev gulp-cssnano gulp-uglify --save-dev
   ```
   ## Issues:
   
