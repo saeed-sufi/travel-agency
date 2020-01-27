@@ -10,6 +10,8 @@
   git checkout -- .
   git remote -v
   git remote set-url origin https://github.com/saeed-sufi/travel-agency.git
+  // To make a gitignore file, first make a gitignore.txt file and then open the command line and type:
+  ren gitignore.txt .gitignore
   git push origin master
   git pull origin master
   git clone https://github.com/saeed-sufi/travel-agency.git
@@ -80,9 +82,13 @@
   npm install postcss-mixins --save-dev
   npm install webpack -g // make sure to install it globally!
   npm install babel-core babel-loader babel-preset-es2015 --save-dev
-  
-  
-  
+  npm install gulp-rename --save-dev
+  npm install lazysizes --save
+  npm install jquery-smooth-scroll --save
+  npm install picturefill --save
+  npm install imagemin --save-dev
+  npm install usemin --save-dev
+  npm install gulp-rev gulp-cssnano gulp-uglify --save-dev
   ```
   ## Issues:
   
