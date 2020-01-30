@@ -1,13 +1,49 @@
 # travel-agency
 
+## Workflow
+* First create your project folder and `git init`. Then create an empty repo on github. Then clone the github repo you are interested in on your computer. Then `git config` to tell git who is going to make changes to the cloned repo from now on. Then `git remote set-url` to tell git where you will be pushing the git repo from now on. Don't forget to make a `.gitignore` file in your project directory. Finally, `git push`.
+
+* You'll need npm for package management so npm init to make the package.json in project directory. If you already have a package.json with all the package items listed in it, just `npm install` to install all the listed packages. 
+
+* You'll need gulp for automation. it's a build system or task runner. Gulp is like a record player and gulp plugins are like records. There is almost a gulp plugin to automate any task you can think of. 
+
+* To install Gulp, first install `gulp-cli` globally. Then install it locally in your project folder. 
+
+* `npm install --save` will install packages which are needed to run the project in web browser as dev dependencies while `npm install --save-dev` will list package installation list in package.json as dev-dependencies which make our life as web developers easier. 
+
+* Then, create the `gulpfile.js` in project directory. Everything in gulp, revolve around tasks. So, we start to edit gulpfile to add tasks which watch the certain files (html, css, php, ...) and run an specific task if any changes happen in any of the files. 
+
+* First we work on the `styles` task which takes care of css files. Here we need something like Sass or Postcss to work as a filter so that when we pipe css source file(s) into destination folder, postcss automatically applies filters to main css files. These filters are actually gulp plugins which are used as elements of the array that `postcss([])` expects.
+
+* `translateY` lets us position an element vertically relative to **itself**. For example, `translateY(100%) will push the content down, however tall the content is.
+
+* For responsive images, it's better to have a real `img` element in your html file rather than applying the image as a css background image.
+
+* BEM stands for Block, Element and Modifier. Look for block elements in the design file. 
+
+* Class names are not necessarily supposed to be semantic. They are just a hook for css and javascript. So, the class names must communicate useful information to developers. 
+
+* For font sizes, padding and margin values, we use `rem` unit in this course instead of `px`, `%` or `em`.
+
+* If we are giving padding to an element, we need to set the element to be an `inline-block` level element; that way, its parent and surrounding elements will be aware of its vertical padding.
+
+* `mixins` are very useful for working with media queries.
+
+* If `postcss([])` encounters an error we have to handle it in a  way that the watch task doesn't terminate; we do so by adding `.on('error', function() {this.emit('end')}` to the watch task.
+
 ## Git Commands:
 ```
   git init
+  // Git needs to know who is making the changes
   git config --global user.name saeed-sufi
   git config --global user.email saeed.sufi@hotmail.com
   git add -A
   git commit -m 'testing git'
+  // In order to get back to the last commit
   git checkout -- .
+  // In order to delete .git 
+  rm -rf .git
+  // if you want to where your github repo will be pushed to:
   git remote -v
   git remote set-url origin https://github.com/saeed-sufi/travel-agency.git
   // To make a gitignore file, first make a gitignore.txt file and then open the command line and type:
@@ -49,6 +85,8 @@
  
   
   ## npm 
+  
+  If you need an npm package, search for it in the npmjs website. 
   ```
   npm init // This makes package.json (our grocery list)
   npm install jquery --save
@@ -95,8 +133,9 @@
   I had  to install [plumber](https://www.npmjs.com/package/gulp-plumber) to circumvent CSSSyntaxError and prevent it from breaking the pipe. This issue was resolved when I learned how to manage gulp errors later in the course. So, there was no need to use plumber anymore.
   
   ## Notes:
-  **normalize.css** is very useful since it resets every default css property that different browsers use so that our project would look the same in all browsers. 
-  Remember to use it for all your projects!
+  * **normalize.css** is very useful since it resets every default css property that different browsers use so that our project would look the same in all browsers. Remember to use it for all your projects!
+  
+  * Staging step in git is our chance to consider what changes we need to apply to our repo
   
  ### em Size Unit
  Use ```em``` for margins of the text so that they scale relative to the font sizes used in the text. 
