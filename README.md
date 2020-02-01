@@ -29,8 +29,21 @@
 
 * `mixins` are very useful for working with media queries.
 
-* If `postcss([])` encounters an error we have to handle it in a  way that the watch task doesn't terminate; we do so by adding `.on('error', function() {this.emit('end')}` to the watch task.
+* If `postcss([])` encounters an error we have to handle it in a way that the watch task doesn't terminate; we do so by adding `.on('error', function() {this.emit('end')}` to the watch task.
 
+### Responsive Images
+
+* There are two scenarios when dealing with responsive images. 
+1. Art direction and cropping situation: The images are cropped for desing purposes. In this case we need to use `picture` element. Also, in the picture element, we have to begin with **smallest** image in `img` tag. Then, use `source` element to add `srcset` and `media` for bigger images. 
+2. Image resolution and file size situation (faster load time): The only diffrence between alternative images is their size. In this scenario, we don't need `picture` element and `media` attribute. We only need a traditional `img` element with all the different image sizes listed in the `srcset` attribute. Also, we need to help the browser to know about the size of each image by adding pixel-width of each image (570w). 
+
+* You can combine this two situation when you need to send different cropped images to monitors with higher resolution (4K, ..). In this case, we need to add the high-dpi image to the `srcset` atribute of `source` element. Also, do not forget to tell the web browser about the width of the image.
+
+* Note that if you need to add multiple images for `img` element, you need to use `srcset` instead of `src` element.
+
+### More CSS Styling tips
+
+* **Never** insert an element between two elements that are positioned relative and absolute in relation with each other.
 ## Git Commands:
 ```
   git init
