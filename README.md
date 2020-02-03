@@ -41,9 +41,21 @@
 
 * Note that if you need to add multiple images for `img` element, you need to use `srcset` instead of `src` element.
 
+* Note that when you use responsive images, browser will assume that the image is going to take the entire width of the window. That's why they choose to display high-dpi copy of the image. So, we need to tell the browser that the image width is not going to be more than X pixels; we do so by adding `sizes` attribute to the `source` element (ex: `sizes = "404px"`). We can add media query to the `sizes` attribute to tell the browser of the width of image in screens with different sizes (ex: `sizes="(min-width:976px) 976px, 100vw"`)
+
 ### More CSS Styling tips
 
 * **Never** insert an element between two elements that are positioned relative and absolute in relation with each other.
+
+* If you're specifying `width` for a block level element, use `margin-left: auto` and `margin-right: auto` to center it.
+
+* If an `img` element is to be centered, after setting `margin-left: auto` and `margin-right: auto` of its container element, make sure to set the `max-width` of the image to its actual maximum width. Note that for this trick to work, the image should not be floated.
+
+*  Use ```em``` for margins of the text so that they scale relative to the font sizes used in the text.
+
+* If an element is floated, it's taken out of the flow of the page and it's parent element how tall it should be.
+
+
 ## Git Commands:
 ```
   git init
@@ -149,6 +161,4 @@
   * **normalize.css** is very useful since it resets every default css property that different browsers use so that our project would look the same in all browsers. Remember to use it for all your projects!
   
   * Staging step in git is our chance to consider what changes we need to apply to our repo
-  
- ### em Size Unit
- Use ```em``` for margins of the text so that they scale relative to the font sizes used in the text. 
+   
