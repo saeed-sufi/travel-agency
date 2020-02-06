@@ -55,6 +55,7 @@
 
 * If an element is floated, it's taken out of the flow of the page and it's parent element how tall it should be.
 
+* If an element is `position: relative` its surrounding elements, would not be aware of the change; They will think that the relatively positioned element is still where it used to be.
 
 ## Git Commands:
 ```
@@ -91,7 +92,7 @@
   git branch -d count-to-fifteen
   // create a new branch and check out to it in one move: 
   git checkout -b our-features
-  // if you want a dedicated commit for the merge:
+  // if you want a dedicated commit for the merge. If you have lots of commits already, then it's better to merge with disabled fast forward.
   git merge our-features --no-ff
   // show a list of branches:
   git branch
