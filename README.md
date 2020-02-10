@@ -57,6 +57,27 @@
 
 * If an element is `position: relative` its surrounding elements, would not be aware of the change; They will think that the relatively positioned element is still where it used to be.
 
+* `position: absolute` will cause the element to get out of the normal flow of the page.
+
+* When an element is positioned absolutely, it will shrink wrap and only use as much space as it need to fit its content. You can adjust it by setting `width: 100%`
+
+* When two html elements overlap, the one that comes later will sit on top. This is when we need to use z-index.
+
+* Note that when using `transform: scale()`, by default, the element consideres its perfect center to be the origin of the transform.
+
+## Javascript
+
+* In Javascript, a `constructor` is a reusable blueprint.
+
+* The `require()` syntax for importing js files, works in gulp because gulp is running in Node.js but it wouldn't work in browser! This is when we need **webpack** for making a bundled file of all of the separate js files. 
+
+* first install webpack globally, then create a `webpack.config.js` file in the root of the main directory. Note that webpack needs us to give it an absolute path (not a relative path); This is why we need to use `path`.
+
+* `babel-loader` helps us to integrate babel with webpack
+
+
+
+
 ## Git Commands:
 ```
   git init
