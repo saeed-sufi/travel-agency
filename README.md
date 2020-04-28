@@ -34,7 +34,7 @@
 ### Responsive Images
 
 * There are two scenarios when dealing with responsive images. 
-1. Art direction and cropping situation: The images are cropped for desing purposes. In this case we need to use `picture` element. Also, in the picture element, we have to begin with **smallest** image in `img` tag. Then, use `source` element to add `srcset` and `media` for bigger images. 
+1. Art direction and cropping situation: The images are cropped for desing purposes. In this case we need to use `picture` element. Also, in the picture element, we have to begin with **smallest** image in `img` tag. Then, use `source` element to add `srcset` and `media` for bigger images. Note that the order of media queries matters and it should be in the direction of large images to smaller ones. 
 2. Image resolution and file size situation (faster load time): The only diffrence between alternative images is their size. In this scenario, we don't need `picture` element and `media` attribute. We only need a traditional `img` element with all the different image sizes listed in the `srcset` attribute. Also, we need to help the browser to know about the size of each image by adding pixel-width of each image (570w). 
 
 * You can combine this two situation when you need to send different cropped images to monitors with higher resolution (4K, ..). In this case, we need to add the high-dpi image to the `srcset` atribute of `source` element. Also, do not forget to tell the web browser about the width of the image.
@@ -47,7 +47,7 @@
 
 * **Never** insert an element between two elements that are positioned relative and absolute in relation with each other.
 
-* If you're specifying `width` for a block level element, use `margin-left: auto` and `margin-right: auto` to center it.
+* If you're specifying `width` for a block level element, use `-left: auto` and `margin-right: auto` to center it.
 
 * If an `img` element is to be centered, after setting `margin-left: auto` and `margin-right: auto` of its container element, make sure to set the `max-width` of the image to its actual maximum width. Note that for this trick to work, the image should not be floated.
 
