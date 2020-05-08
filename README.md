@@ -65,6 +65,10 @@
 
 * Note that when using `transform: scale()`, by default, the element consideres its perfect center to be the origin of the transform.
 
+* You can use `left` property and `transform: translateX` to center an element.
+
+* Use `position: absolute` and set `left` and `top` properties to position an element perfectly where you want it to be.
+
 ## Javascript
 
 * In Javascript, a `constructor` is a reusable blueprint.
