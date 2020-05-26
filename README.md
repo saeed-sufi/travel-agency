@@ -69,6 +69,8 @@
 
 * Use `position: absolute` and set `left` and `top` properties to position an element perfectly where you want it to be.
 
+* If you need to put a semi-transparent layer on an image, after setting the `background-image` to use the image, apply `linear-gradient` for setting a transparent color on the image.
+
 ## Javascript
 
 * In Javascript, a `constructor` is a reusable blueprint.
