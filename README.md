@@ -146,6 +146,8 @@
   npm install // This command installs all the packages listed in package.json
   npm show <packagename> version
   npm list --depth=0
+  // to delete all node_modules:
+  npm uninstall `ls -1 node_modules | tr '/\n' ' '`
   ```
   
   ## Gulp
