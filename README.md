@@ -1,7 +1,7 @@
 # travel-agency
 
 ## Workflow
-* First create your project folder and `git init`. Then create an empty repo on github. Then clone the github repo you are interested in on your computer. Then `git config` to tell git who is going to make changes to the cloned repo from now on. Then `git remote set-url` to tell git where you will be pushing the git repo from now on. Don't forget to make a `.gitignore` file in your project directory. Finally, `git push`.
+* First create your project folder. Then create an empty repo on github. Then clone the github repo you are interested in on your computer. Then `git config` to tell git who is going to make changes to the cloned repo from now on. Then `git remote set-url` to tell git where you will be pushing the git repo from now on. Don't forget to make a `.gitignore` file in your project directory. Finally, `git push`.
 
 * You'll need npm for package management so npm init to make the package.json in project directory. If you already have a package.json with all the package items listed in it, just `npm install` to install all the listed packages. 
 
@@ -90,6 +90,8 @@
   // Git needs to know who is making the changes
   git config --global user.name saeed-sufi
   git config --global user.email saeed.sufi@hotmail.com
+  // Git command who am I
+  git config --list
   git add -A
   git commit -m 'testing git'
   // In order to get back to the last commit
