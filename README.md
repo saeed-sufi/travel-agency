@@ -23,10 +23,11 @@
 
 * Class names are not necessarily supposed to be semantic. They are just a hook for css and javascript. So, the class names must communicate useful information to developers. 
 
-* For font sizes, padding and margin values, we use `rem` unit in this course instead of `px`, `%` or `em`.
+* For font sizes, padding and margin values, we use `rem` unit in this course instead of `px`, `%` or `em`. When we use `rem` everything is relative to the root of the page which is always `html` element. 
 
 * If we are giving padding to an element, we need to set the element to be an `inline-block` level element; that way, its parent and surrounding elements will be aware of its vertical padding.
 
+* We need to tell `browserSync` where our website lives because browserSync actually spins up a little web server on our computer and it needs know where this web server should point.
 * `mixins` are very useful for working with media queries.
 
 * If `postcss([])` encounters an error we have to handle it in a way that the watch task doesn't terminate; we do so by adding `.on('error', function() {this.emit('end')}` to the watch task.
@@ -98,7 +99,7 @@
   git checkout -- .
   // In order to delete .git 
   rm -rf .git
-  // if you want to where your github repo will be pushed to:
+  // if you want to know where your github repo will be pushed to:
   git remote -v
   git remote set-url origin https://github.com/saeed-sufi/travel-agency.git
   // To make a gitignore file, first make a gitignore.txt file and then open the command line and type:
