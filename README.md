@@ -44,11 +44,19 @@
 
 * Note that when you use responsive images, browser will assume that the image is going to take the entire width of the window. That's why they choose to display high-dpi copy of the image. So, we need to tell the browser that the image width is not going to be more than X pixels; we do so by adding `sizes` attribute to the `source` element (ex: `sizes = "404px"`). We can add media query to the `sizes` attribute to tell the browser of the width of image in screens with different sizes (ex: `sizes="(min-width:976px) 976px, 100vw"`)
 
+* If you need to add a class to a `picture` element, you have to add to the `img` element which resides in `picture` element.
+
 ### More CSS Styling tips
+
+* It's preferable to use a descendent selector rather than nesting more than two rules.
+
+* You should be very careful not to pollute the global css scope (`_global.css`).
 
 * **Never** insert an element between two elements that are positioned relative and absolute in relation with each other.
 
 * If you're specifying `width` for a block level element, use `-left: auto` and `margin-right: auto` to center it.
+
+* `img` element is by default an inline level element.
 
 * If an `img` element is to be centered, after setting `margin-left: auto` and `margin-right: auto` of its container element, make sure to set the `max-width` of the image to its actual maximum width. Note that for this trick to work, the image should not be floated.
 
@@ -122,7 +130,7 @@
   git branch -d count-to-fifteen
   // create a new branch and check out to it in one move: 
   git checkout -b our-features
-  // if you want a dedicated commit for the merge. If you have lots of commits already, then it's better to merge with disabled fast forward.
+  // if you want a dedicated commit for the merge so that all the commits could be reviewed in one place and (in case you have lots of commits already), then it's better to merge with disabled fast forward.
   git merge our-features --no-ff
   // show a list of branches:
   git branch
