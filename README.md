@@ -60,6 +60,8 @@
 
 * If an `img` element is to be centered, after setting `margin-left: auto` and `margin-right: auto` of its container element, make sure to set the `max-width` of the image to its actual maximum width. Note that for this trick to work, the image should not be floated.
 
+* Do not forget to set `overflow: hidden` in `wrapper.css`. 
+
 *  Use ```em``` for margins of the text so that they scale relative to the font sizes used in the text.
 
 * If an element is floated, it's taken out of the flow of the page and it's parent element how tall it should be.
@@ -81,6 +83,8 @@
 * If you need to put a semi-transparent layer on an image, after setting the `background-image` to use the image, apply `linear-gradient` for setting a transparent color on the image.
 
 ## Javascript
+
+* An `object` is an entity that has data and behaviour (nouns and verbs).
 
 * In Javascript, a `constructor` is a reusable blueprint.
 
