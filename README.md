@@ -94,6 +94,8 @@
 
 * When we `require()` a file, the code that file is executed immediatelly. But apart from running this file, we need to have access to certain parts of it. In other words we want to make these parts, accessible or callable.
 
+* `require()` returns `exports` object.
+
 * first install webpack globally, then create a `webpack.config.js` file in the root of the main directory. Note that webpack needs us to give it an absolute path (not a relative path); This is why we need to use `path`.
 
 * `babel-loader` helps us to integrate babel with webpack
