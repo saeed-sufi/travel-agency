@@ -88,7 +88,11 @@
 
 * In Javascript, a `constructor` is a reusable blueprint.
 
+* A `constructor` function looks like a regular function and the fact that how we use this function, makes it a `constructor` function (by using `new` keyword which is an operator that creates a new instance of the constructor function object type).
+
 * The `require()` syntax for importing js files, works in gulp because gulp is running in Node.js but it wouldn't work in browser! This is when we need **webpack** for making a bundled file of all of the separate js files. 
+
+* When we `require()` a file, the code that file is executed immediatelly. But apart from running this file, we need to have access to certain parts of it. In other words we want to make these parts, accessible or callable.
 
 * first install webpack globally, then create a `webpack.config.js` file in the root of the main directory. Note that webpack needs us to give it an absolute path (not a relative path); This is why we need to use `path`.
 
@@ -159,6 +163,7 @@
   npm init // This makes package.json (our grocery list)
   npm install jquery --save
   npm install // This command installs all the packages listed in package.json
+  // Show the current available version of a package (not necessarilly the one that is installed in your project):
   npm show <packagename> version
   npm list --depth=0
   // to delete all node_modules:
