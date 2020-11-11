@@ -82,6 +82,10 @@
 
 * If you need to put a semi-transparent layer on an image, after setting the `background-image` to use the image, apply `linear-gradient` for setting a transparent color on the image.
 
+* An element should be `position: relative` so that the `z-index` property is acknowledged by the browser.
+
+* To change `background-color` from a real color to its default, `background-color: transparent`.
+
 ## Javascript
 
 * An `object` is an entity that has data and behaviour (nouns and verbs).
@@ -100,6 +104,7 @@
 
 * `babel-loader` helps us to integrate babel with webpack
 
+* The first item in a jquery array-like object, is always a pointer to the native DOM element. 
 
 
 
