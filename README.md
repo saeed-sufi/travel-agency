@@ -106,7 +106,7 @@
 
 * The first item in a jquery array-like object, is always a pointer to the native DOM element. 
 
-
+* Browsers download an image, as soon as they see a `src` or `srcset` attribute in the `img` tag.
 
 ## Git Commands:
 ```
