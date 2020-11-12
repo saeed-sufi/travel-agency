@@ -44,7 +44,9 @@
 
 * Note that when you use responsive images, browser will assume that the image is going to take the entire width of the window. That's why they choose to display high-dpi copy of the image. So, we need to tell the browser that the image width is not going to be more than X pixels; we do so by adding `sizes` attribute to the `source` element (ex: `sizes = "404px"`). We can add media query to the `sizes` attribute to tell the browser of the width of image in screens with different sizes (ex: `sizes="(min-width:976px) 976px, 100vw"`)
 
-* If you need to add a class to a `picture` element, you have to add to the `img` element which resides in `picture` element.
+* If you need to add a class to a `picture` element, you have to add it to the `img` element which resides in `picture` element.
+
+* For responsive images to work for older browser which do not support `picture` elements and `srcset` attributes, you need to install an npm package called `picturefill`. Import it into the `vendor.js` file. 
 
 ### More CSS Styling tips
 
@@ -107,6 +109,8 @@
 * The first item in a jquery array-like object, is always a pointer to the native DOM element. 
 
 * Browsers download an image, as soon as they see a `src` or `srcset` attribute in the `img` tag.
+
+* By adding Modernizr to your project you would be able to check what features the browser support on the fly.
 
 ## Git Commands:
 ```
