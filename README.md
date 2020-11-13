@@ -162,9 +162,13 @@
   git commit -m "Subject" -m "Description..."
   ```
   #### Git Terminology
-  Pull request: is basically a request to merge one branch into another
+  * Pull request: is basically a request to merge one branch into another
   
-  
+  * In order to avoid merge conflicts, keep in mind the four following tip:
+  1. Run `git pull` as often as possible.
+  2. Communicate with your team.
+  3. Standardize whitespace setting of your editor.
+  4. Think of `git merge` as a two-way street (`git merge master` while you're in branch).
  
   
   ## npm 
