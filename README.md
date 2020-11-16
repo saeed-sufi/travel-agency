@@ -126,6 +126,7 @@
   git checkout -- .
   // In order to delete .git 
   rm -rf .git
+  git remote add origin https://github.com/saeed-sufi/travel-agency.git
   // if you want to know where your github repo will be pushed to:
   git remote -v
   git remote set-url origin https://github.com/saeed-sufi/travel-agency.git
