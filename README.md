@@ -14,7 +14,8 @@
 * Then, create the `gulpfile.js` in project directory. Everything in gulp, revolve around tasks. So, we start to edit gulpfile to add tasks which watch the certain files (html, css, php, ...) and run an specific task if any changes happen in any of the files. 
 
 * Don't forget to add
- ```   "browserslist": [
+ ```
+ "browserslist": [
     "last 3 versions"
   ]
 ``` 
