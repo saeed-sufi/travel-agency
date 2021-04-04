@@ -16,7 +16,8 @@
 * Don't forget to add
  ```   "browserslist": [
     "last 3 versions"
-  ], ``` 
+  ]
+``` 
   in `package.json` file to make autoprefixer work.
   
 * First we work on the `styles` task which takes care of css files. Here we need something like Sass or Postcss to work as a filter so that when we pipe css source file(s) into destination folder, postcss automatically applies filters to main css files. These filters are actually gulp plugins which are used as elements of the array that `postcss([])` expects.
