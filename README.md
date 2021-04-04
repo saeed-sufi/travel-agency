@@ -13,6 +13,12 @@
 
 * Then, create the `gulpfile.js` in project directory. Everything in gulp, revolve around tasks. So, we start to edit gulpfile to add tasks which watch the certain files (html, css, php, ...) and run an specific task if any changes happen in any of the files. 
 
+* Don't forget to add
+ ```   "browserslist": [
+    "last 3 versions"
+  ], ``` 
+  in `package.json` file to make autoprefixer work.
+  
 * First we work on the `styles` task which takes care of css files. Here we need something like Sass or Postcss to work as a filter so that when we pipe css source file(s) into destination folder, postcss automatically applies filters to main css files. These filters are actually gulp plugins which are used as elements of the array that `postcss([])` expects.
 
 * `translateY` lets us position an element vertically relative to **itself**. For example, `translateY(100%) will push the content down, however tall the content is.
