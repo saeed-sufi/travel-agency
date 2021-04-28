@@ -51,6 +51,8 @@
 
 * “descendant selectors” are used to target only those elements that are "inside" of another element.
 
+* Use pseudo-classes to style different states of an element (`link`, `visited`, `hover`, `active`, ...). Think of them as class selectors that you don’t have to write on your own because they’re built into the browser.
+
 * If `postcss([])` encounters an error we have to handle it in a way that the watch task doesn't terminate; we do so by adding `.on('error', function() {this.emit('end')}` to the watch task.
 
 ### Responsive Images
