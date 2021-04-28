@@ -36,7 +36,20 @@
 * If we are giving padding to an element, we need to set the element to be an `inline-block` level element; that way, its parent and surrounding elements will be aware of its vertical padding.
 
 * We need to tell `browserSync` where our website lives because browserSync actually spins up a little web server on our computer and it needs know where this web server should point.
-* `mixins` are very useful for working with media queries.
+
+* Inline boxes don’t affect vertical spacing. They’re not for determining layout—they’re for styling stuff inside of a block.
+
+* If you want to play with the vertical space of a page, you must be working with block-level elements. check your display property if top or bottom margin isn't working.
+
+* `paddings` never collapse. Add a `div` with `padding-top: 1px` between two block level consecutive elements to prevent their `margins` to collapse.
+
+* HTML elements define their dimensions automatically. If we need explicit dimensions, we use `width` and `height` properties.
+
+* Using `margin:auto` for centering a block only works when it has an explicit `width` defined on it.
+
+* `text-align` property aligns the content and "inline" boxes inside of a block-level element. It will only align the content inside of our block boxes—not the blocks themselves.
+
+* “descendant selectors” are used to target only those elements that are "inside" of another element.
 
 * If `postcss([])` encounters an error we have to handle it in a way that the watch task doesn't terminate; we do so by adding `.on('error', function() {this.emit('end')}` to the watch task.
 
