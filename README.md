@@ -53,6 +53,8 @@
 
 * Use pseudo-classes to style different states of an element (`link`, `visited`, `hover`, `active`, ...). Think of them as class selectors that you don’t have to write on your own because they’re built into the browser.
 
+* ID selectors are generally frowned upon. Use class selectors instead. Ids create a dependency between your website’s URLs and your CSS styles and this double functionality is another reason why we should avoid using them as css selectors. `href='selectors.html#button-2'`
+
 * If `postcss([])` encounters an error we have to handle it in a way that the watch task doesn't terminate; we do so by adding `.on('error', function() {this.emit('end')}` to the watch task.
 
 ### Responsive Images
