@@ -55,6 +55,13 @@
 
 * ID selectors are generally frowned upon. Use class selectors instead. Ids create a dependency between your website’s URLs and your CSS styles and this double functionality is another reason why we should avoid using them as css selectors. `href='selectors.html#button-2'`
 
+* insert this code into `global.css` file so that you wouldn't forget to add `alt` attribute for every `img` element. 
+`
+img:not([alt]) {
+  filter: grayscale(100%);
+}
+`
+
 * If `postcss([])` encounters an error we have to handle it in a way that the watch task doesn't terminate; we do so by adding `.on('error', function() {this.emit('end')}` to the watch task.
 
 ### Responsive Images
