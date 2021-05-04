@@ -56,11 +56,11 @@
 * ID selectors are generally frowned upon. Use class selectors instead. Ids create a dependency between your website’s URLs and your CSS styles and this double functionality is another reason why we should avoid using them as css selectors. `href='selectors.html#button-2'`
 
 * insert this code into `global.css` file so that you wouldn't forget to add `alt` attribute for every `img` element. 
-`
+```
 img:not([alt]) {
   filter: grayscale(100%);
 }
-`
+```
 
 * If `postcss([])` encounters an error we have to handle it in a way that the watch task doesn't terminate; we do so by adding `.on('error', function() {this.emit('end')}` to the watch task.
 
@@ -119,6 +119,17 @@ img:not([alt]) {
 * An element should be `position: relative` so that the `z-index` property is acknowledged by the browser.
 
 * To change `background-color` from a real color to its default, `background-color: transparent`.
+
+## Flexbox
+
+* If a flex item has an explicit width, its `flex-basis` is set to that width. Otherwise, it will be sized according to the width of its content. Also, if you set `flex-basis: 0;` it means all the space is free to grab by flexbox and be shared in proportion.
+* when `flex-basis: auto` flexbox will take the max-content size of the item as the flex-basis. 
+
+* If you set `flex-basis: 0` then explicitly setting the items width, would be ignored.
+
+* When there is positive free space in the container, adjusting `flex-shrink` will trigger no change and vice versa for `flex-grow` when there is negative free space. In other words, items can’t grow with no positive free space, and they won’t shrink unless there is negative free space.
+
+* If you set `min-width` or `max-width` for flex items, that size is not going to be violated no matter how you adjust `shrink` or `grow`. In other words, it will make flex items inflexible in one direction. But if you only set `width` for flex items, then modifying `shrink` and `grow` properties would still work in both direction.
 
 ## Javascript
 
