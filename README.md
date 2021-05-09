@@ -136,6 +136,18 @@ img:not([alt]) {
 
 * `align-content` is similar to `align-items`, but instead of aligning flex items, it aligns flex lines. So, in order for it to have any effect, `flex-wrap` has to be set to `wrap`.
 
+*  flex items can be allowed to wrap but, once they do so, each line becomes a flex container of its own.
+
+* As a rule of thumb, if you are adding widths to flex items in order to make items in one row of a wrapped flex container line up with the items above them you really want two-dimensional layout.
+
+* If your flex container has a height set, then the items will stretch to that height, regardless of how much content is in the item.
+
+* `align-self` property has a value of `auto` which will reset the value to that which is defined on the flex container.
+
+* The reordering capabilities of flex layout intentionally affect only the visual rendering, leaving speech order and navigation based on the source order. Authors must not use order or the \*-reverse values of flex-flow/flex-direction as a substitute for correct source ordering, as that can ruin the accessibility of the document.
+
+* When using `order` take care that you are not reordering items that could be accessed by the keyboard as a user is tabbing around.
+
 ## Javascript
 
 * An `object` is an entity that has data and behaviour (nouns and verbs).
