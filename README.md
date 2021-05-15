@@ -64,6 +64,8 @@ img:not([alt]) {
 
 * If `postcss([])` encounters an error we have to handle it in a way that the watch task doesn't terminate; we do so by adding `.on('error', function() {this.emit('end')}` to the watch task.
 
+* in order to disable scroll on `body`, add `{height: 100%; overflow: hidden;}` on body. Use case is when you open a lightbox and you don't want the page behind the lightbox be scrollable.
+
 ### Responsive Images
 
 * There are two scenarios when dealing with responsive images. 
