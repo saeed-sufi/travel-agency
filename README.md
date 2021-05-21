@@ -9,7 +9,7 @@
 
 * To install Gulp, first install `gulp-cli` globally. Then install it locally in your project folder. 
 
-* `npm install --save` will install packages which are needed to run the project in web browser as dev dependencies while `npm install --save-dev` will list package installation list in package.json as dev-dependencies which make our life as web developers easier. 
+* `npm install --save` will install packages which are needed to run the project in web browser without which our application wouldn't work while `npm install --save-dev` will list package installation list in package.json as dev-dependencies which make our life as web developers easier. 
 
 * Then, create the `gulpfile.js` in project directory. Everything in gulp, revolve around tasks. So, we start to edit gulpfile to add tasks which watch the certain files (html, css, php, ...) and run an specific task if any changes happen in any of the files. 
 
