@@ -66,6 +66,20 @@ img:not([alt]) {
 
 * in order to disable scroll on `body`, add `{height: 100%; overflow: hidden;}` on body. Use case is when you open a lightbox and you don't want the page behind the lightbox be scrollable.
 
+* Elements with fixed positioning always have the initial containing block as their containing block. They are a special type of elements that are positioned absolutely. Absolutely positioned elements first look for a positioned element among their parent elements and if they don't find one, they consider the initial containing block as their containing block.
+
+* Remember that in the case of relative positioning they complement one another, so that top:1em and bottom:-1em means the same, and it’s not meaningful to specify both top and bottom (or left and right) for the same element, because one of the values will be ignored. It's not the same for absolutely positioned elements.
+
+* Apart from specifying the position of four corneres of an absolutely position element, you can also specify the position of one of the corners of the absolutely positioned box—say by using top and left—and then specify the dimensions of the box using width and height (or just use no width and height if you want to let it shrink-wrap to fit its contents).
+
+* The thing to remember here is that the values you set for the top, right, bottom and left properties specify the distances from the element’s edges to their corresponding containing block edges.
+
+* absolutely positioned elements, like floated elements, automatically generate block boxes which means you can specify dimensions for even inline elements like spans. 
+
+* Each time you assign an integer value to the z-index property for an element, you create an “envelope” that contains that element and its descendants.
+
+
+
 ### Responsive Images
 
 * There are two scenarios when dealing with responsive images. 
@@ -81,6 +95,8 @@ img:not([alt]) {
 * If you need to add a class to a `picture` element, you have to add it to the `img` element which resides in `picture` element.
 
 * For responsive images to work for older browser which do not support `picture` elements and `srcset` attributes, you need to install an npm package called `picturefill`. Import it into the `vendor.js` file. 
+
+* You should use the media attribute only in art direction scenarios; when you do use media, don't also offer media conditions within the sizes attribute.
 
 ### More CSS Styling tips
 
