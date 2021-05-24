@@ -116,6 +116,10 @@ img:not([alt]) {
 
 *  Use ```em``` for margins of the text so that they scale relative to the font sizes used in the text.
 
+* `transition` don't work for going from `display: none` to `display: block`. You should consider using `visibility: hidden; opacity: 0;` to `visibility: visible; opacity: 1`. Another way is to use `height`. Go from `hieght: 0;` to `height: 10rem`. Note that in this case, going from `height: 0` to `height: auto` wouldn't work either! You need to provide an explicit size value for `height` to work.
+
+* combination of `width` and `max-width` would make a responsive box very easy to make.
+
 * If an element is floated, it's taken out of the flow of the page and it's parent element how tall it should be.
 
 * If an element is `position: relative` its surrounding elements, would not be aware of the change; They will think that the relatively positioned element is still where it used to be.
@@ -137,6 +141,8 @@ img:not([alt]) {
 * An element should be `position: relative` so that the `z-index` property is acknowledged by the browser.
 
 * To change `background-color` from a real color to its default, `background-color: transparent`.
+
+* **Important** note that videos do not play in safari unless you add `autoplay playsinline controls` to the `video` tag!!!
 
 ## Flexbox
 
