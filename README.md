@@ -78,7 +78,14 @@ img:not([alt]) {
 
 * Each time you assign an integer value to the z-index property for an element, you create an “envelope” that contains that element and its descendants.
 
+* Create close buttons using the following structure. It's accessible. 
 
+```
+<button type="button" aria-label="Close">
+  <span aria-hidden="true">×</span>
+</button>
+
+```
 
 ### Responsive Images
 
