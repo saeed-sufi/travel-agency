@@ -27,30 +27,6 @@
 
 * If `postcss([])` encounters an error we have to handle it in a way that the watch task doesn't terminate; we do so by adding `.on('error', function() {this.emit('end')}` to the watch task.
 
-## Javascript
-
-* An `object` is an entity that has data and behaviour (nouns and verbs).
-
-* In Javascript, a `constructor` is a reusable blueprint.
-
-* A `constructor` function looks like a regular function and the fact that how we use this function, makes it a `constructor` function (by using `new` keyword which is an operator that creates a new instance of the constructor function object type).
-
-* The `require()` syntax for importing js files, works in gulp because gulp is running in Node.js but it wouldn't work in browser! This is when we need **webpack** for making a bundled file of all of the separate js files. 
-
-* When we `require()` a file, the code that file is executed immediatelly. But apart from running this file, we need to have access to certain parts of it. In other words we want to make these parts, accessible or callable.
-
-* `require()` returns `exports` object.
-
-* first install webpack globally, then create a `webpack.config.js` file in the root of the main directory. Note that webpack needs us to give it an absolute path (not a relative path); This is why we need to use `path`.
-
-* `babel-loader` helps us to integrate babel with webpack
-
-* The first item in a jquery array-like object, is always a pointer to the native DOM element. 
-
-* Browsers download an image, as soon as they see a `src` or `srcset` attribute in the `img` tag.
-
-* By adding Modernizr to your project you would be able to check what features the browser support on the fly.
-
 ## Git Commands:
 ```
   git init
