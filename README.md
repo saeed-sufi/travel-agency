@@ -37,8 +37,13 @@
   git config --list
   git add -A
   git commit -m 'testing git'
+  // prints commits:
+  git log --oneline
+  // to go back a specific commit:
+  git checkout 900cfcf index.html
   // In order to get back to the last commit
   git checkout -- .
+  
   // In order to delete .git 
   rm -rf .git
   git remote add origin https://github.com/saeed-sufi/travel-agency.git
