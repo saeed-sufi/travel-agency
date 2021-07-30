@@ -43,7 +43,10 @@
   git checkout 900cfcf index.html
   // In order to get back to the last commit
   git checkout -- .
-  
+  // remove staged file and from cache and move it back to untracked files.
+  git rm --cached index.html
+  // A short report of status
+  git status -s
   // In order to delete .git 
   rm -rf .git
   git remote add origin https://github.com/saeed-sufi/travel-agency.git
