@@ -102,6 +102,9 @@
   
   // A pull is just a fetch followed by a merge which means `git pull origin other-branch` is equivalent to `git fetch origin other-branch && git merge other-branch`.
   
+  // To delete a commit but keeping changes: (`git reset` without a --hard or --soft moves your HEAD to point to the specified commit, without changing any files.)
+  git reset HEAD^
+  
   ```
   #### Git Terminology
   * Pull request: is basically a request to merge one branch into another
