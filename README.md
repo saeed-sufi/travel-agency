@@ -84,6 +84,24 @@
   
   // for more extended comment use the following commenting method:
   git commit -m "Subject" -m "Description..."
+  
+  // Create a branch on remote repository
+  git push origin <branch-name>
+  
+  // The following command, makes a branch named 'static' on the remote repo and push commit with d23ea94 hash (newer commits wouldn't be pushed)
+  git push origin d23ea94:refs/heads/static
+  
+  // Undo the last push from remote repository (make sure no one has made changes to the repository before proceeding)
+  git push -f origin cc4b63bebb6:alpha-0.3.0
+  
+  // Delete remote branch
+  git push -d origin <branch_name>
+  
+  // To see what other commits your HEAD (or any other ref) has pointed to in the past
+  git reflog
+  
+  // A pull is just a fetch followed by a merge which means `git pull origin other-branch` is equivalent to `git fetch origin other-branch && git merge other-branch`.
+  
   ```
   #### Git Terminology
   * Pull request: is basically a request to merge one branch into another
