@@ -92,7 +92,7 @@
   git push origin d23ea94:refs/heads/static
   
   // Undo the last push from remote repository (make sure no one has made changes to the repository before proceeding)
-  git push -f origin cc4b63bebb6:alpha-0.3.0
+  git push -f origin <sha_of_previous_commit>:alpha-0.3.0
   
   // Delete remote branch
   git push -d origin <branch_name>
