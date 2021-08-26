@@ -105,6 +105,10 @@
   // To delete a commit but keeping changes: (`git reset` without a --hard or --soft moves your HEAD to point to the specified commit, without changing any files.)
   git reset HEAD^
   
+  // To delete some commits ant discarding any commits in between as if they were never there:
+  git reset --hard 79aaee0
+  git push --force origin develop // to remove commits that are already pushed to develop branch
+  
   ```
   #### Git Terminology
   * Pull request: is basically a request to merge one branch into another
