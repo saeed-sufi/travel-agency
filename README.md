@@ -57,6 +57,8 @@
   ren gitignore.txt .gitignore
   git push origin master
   git pull origin master
+  // to change branch name from master to main
+  git branch -m master main
   git clone https://github.com/saeed-sufi/travel-agency.git
   git branch
   git reset app/index.html // if you don't need to commit changes to a specific file.
