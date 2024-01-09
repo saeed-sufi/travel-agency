@@ -59,7 +59,8 @@
   git pull origin master
   // to change branch name from master to main
   git branch -m master main
-  git clone https://github.com/saeed-sufi/travel-agency.git
+  // to only clone one branch use the `--single-branch` option
+  git clone -b <branchname> --single-branch <remote-repo-url>
   git branch
   // to see the status of local and remote branches:
   git remote show origin
