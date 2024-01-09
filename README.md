@@ -61,6 +61,8 @@
   git branch -m master main
   git clone https://github.com/saeed-sufi/travel-agency.git
   git branch
+  // to see the status of local and remote branches:
+  git remote show origin
   git reset app/index.html // if you don't need to commit changes to a specific file.
   // once you commit all the changes and the working directory is clean, you can create a new branch:
   git branch count-to-ten
