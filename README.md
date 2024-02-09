@@ -113,7 +113,11 @@
   // To delete some commits ant discarding any commits in between as if they were never there:
   git reset --hard 79aaee0
   git push --force origin develop // to remove commits that are already pushed to develop branch
-  
+
+  // To create a `hist` alias:
+  git config --global alias.hist "log --oneline --graph --decorate --all"
+  git config --global --list // to check the alias entries and other info.
+
   ```
   #### Git Terminology
   * Pull request: is basically a request to merge one branch into another
